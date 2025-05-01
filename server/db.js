@@ -1,4 +1,4 @@
-const sqlite3 = require('sqlite3').verbose();
+/*const sqlite3 = require('sqlite3').verbose();
 const path = require('path');
 
 const dbPath = path.join(__dirname, 'data', 'competitors.sqlite');
@@ -10,4 +10,4 @@ const db = new sqlite3.Database(dbPath, (err) => {
     }
 });
 
-module.exports = db;
+module.exports = db; */

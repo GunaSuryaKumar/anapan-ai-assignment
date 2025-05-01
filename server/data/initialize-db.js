@@ -1,4 +1,4 @@
-const sqlite3 = require('sqlite3').verbose();
+/*const sqlite3 = require('sqlite3').verbose();
 const path = require('path');
 
 const dbPath = path.join(__dirname, 'competitors.sqlite');
@@ -58,4 +58,4 @@ db.close((err) => {
     } else {
         console.log('Database connection closed.');
     }
-});
+});*/

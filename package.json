@@ -4,12 +4,10 @@
     "description": "Competitive Intelligence Tool for Anapan AI Assignment",
     "main": "server/server.js",
     "scripts": {
-        "start": "node server/server.js",
-        "init-db": "node server/data/initialize-db.js"
+        "start": "node server/server.js"
     },
     "dependencies": {
         "anapan-ai-assignment": "file:",
-        "express": "^4.17.1",
-        "sqlite3": "^5.0.2"
+        "express": "^4.17.1"
     }
 }
