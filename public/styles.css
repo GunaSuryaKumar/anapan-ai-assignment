@@ -1,0 +1,191 @@
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(45deg, #ff6b6b, #feca57, #48ff72, #00ddeb, #809fff, #ff64f9);
+    background-size: 400%;
+    animation: rainbowBackground 15s ease infinite;
+    color: #333;
+}
+
+@keyframes rainbowBackground {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
+.container {
+    max-width: 1200px;
+    background: rgba(255, 255, 255, 0.9);
+    border-radius: 15px;
+    padding: 30px;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
+    margin-bottom: 30px;
+}
+
+.rainbow-text {
+    background: linear-gradient(to right, #ff6b6b, #feca57, #48ff72, #00ddeb, #809fff, #ff64f9);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    animation: rainbowText 5s ease infinite;
+}
+
+@keyframes rainbowText {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
+.search-input {
+    border: 2px solid #007bff;
+    transition: all 0.3s ease;
+}
+
+.search-input:focus {
+    border-color: #ff64f9;
+    box-shadow: 0 0 10px rgba(255, 100, 249, 0.5);
+}
+
+.search-btn, .reset-btn, .export-btn, .fullscreen-btn {
+    position: relative;
+    overflow: hidden;
+    transition: all 0.3s ease;
+    z-index: 1;
+}
+
+.search-btn {
+    background: #007bff;
+    color: white;
+    animation: pulse 2s infinite;
+}
+
+.search-btn:hover {
+    background: linear-gradient(45deg, #ff6b6b, #feca57, #48ff72);
+    transform: scale(1.05);
+}
+
+@keyframes pulse {
+    0% { box-shadow: 0 0 0 0 rgba(0, 123, 255, 0.7); }
+    70% { box-shadow: 0 0 0 10px rgba(0, 123, 255, 0); }
+    100% { box-shadow: 0 0 0 0 rgba(0, 123, 255, 0); }
+}
+
+.reset-btn {
+    background: #6c757d;
+    color: white;
+}
+
+.reset-btn:hover {
+    background: linear-gradient(45deg, #00ddeb, #809fff, #ff64f9);
+    transform: scale(1.05);
+}
+
+.export-btn {
+    background: #28a745;
+    color: white;
+}
+
+.export-btn:hover {
+    background: linear-gradient(45deg, #feca57, #48ff72, #00ddeb);
+    transform: rotate(360deg);
+    box-shadow: 0 0 15px rgba(40, 167, 69, 0.5);
+}
+
+.fullscreen-btn {
+    background: #dc3545;
+    color: white;
+}
+
+.fullscreen-btn:hover {
+    background: linear-gradient(45deg, #ff6b6b, #feca57, #ff64f9);
+    transform: scale(1.05);
+}
+
+.table-container {
+    position: relative;
+    transition: all 0.5s ease;
+}
+
+.table-container.fullscreen {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(255, 255, 255, 0.95);
+    z-index: 1000;
+    padding: 20px;
+    margin: 0;
+    overflow-y: auto;
+}
+
+.table th {
+    background: linear-gradient(45deg, #007bff, #00ddeb);
+    color: white;
+    position: sticky;
+    top: 0;
+    z-index: 10;
+}
+
+.table td {
+    transition: background 0.3s ease;
+}
+
+.table tbody tr {
+    opacity: 0;
+    animation: fadeIn 0.5s ease forwards;
+    animation-delay: calc(var(--row-index) * 0.1s);
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(10px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+.table tbody tr:hover {
+    background: rgba(0, 123, 255, 0.1);
+    cursor: pointer;
+    transform: scale(1.01);
+    transition: transform 0.2s ease;
+}
+
+.table td a {
+    display: inline-block;
+    padding: 5px 10px;
+    background: #007bff;
+    color: white;
+    border-radius: 5px;
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+
+.table td a:hover {
+    background: #ff64f9;
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(255, 100, 249, 0.4);
+}
+
+.table td a i {
+    margin-right: 5px;
+}
+
+.highlight {
+    background: linear-gradient(45deg, #ffeb3b, #ff64f9);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    font-weight: bold;
+}
+
+footer {
+    background: rgba(255, 255, 255, 0.8);
+    border-top: 2px solid #007bff;
+}
+
+#loading-spinner {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
