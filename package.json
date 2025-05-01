@@ -1,17 +1,15 @@
 {
     "name": "anapan-ai-assignment",
     "version": "1.0.0",
-    "description": "Competitive intelligence tool for Infosys",
-    "main": "server.js",
+    "description": "Competitive Intelligence Tool for Anapan AI Assignment",
+    "main": "server/server.js",
     "scripts": {
         "start": "node server/server.js",
         "init-db": "node server/data/initialize-db.js"
     },
     "dependencies": {
         "anapan-ai-assignment": "file:",
-        "express": "^4.19.2",
-        "sqlite3": "^5.1.7"
-    },
-    "author": "",
-    "license": "ISC"
+        "express": "^4.17.1",
+        "sqlite3": "^5.0.2"
+    }
 }

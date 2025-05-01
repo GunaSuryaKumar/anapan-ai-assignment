@@ -1,22 +1,23 @@
 const express = require('express');
 const router = express.Router();
-const db = require('../db'); // Import db from db.js
+const fs = require('fs');
+const path = require('path');
+
+let competitorsData;
+try {
+    competitorsData = JSON.parse(fs.readFileSync(path.join(__dirname, '../data/competitors.json'), 'utf8'));
+    console.log('Competitors data loaded:', competitorsData.length, 'entries');
+} catch (error) {
+    console.error('Error loading competitors.json:', error.message);
+    competitorsData = [];
+}
 
 router.get('/competitors', (req, res) => {
-    const competitor = req.query.competitor || ''; // Search by competitor, default to empty string
-    const query = `
-        SELECT competitor, description, source
-        FROM competitors
-        WHERE competitor LIKE ?
-    `;
-    db.all(query, [`%${competitor}%`], (err, rows) => {
-        if (err) {
-            console.error('Database query error:', err);
-            res.status(500).json({ error: 'Internal server error' });
-        } else {
-            res.json(rows);
-        }
-    });
+    const competitor = req.query.competitor || '';
+    const filteredData = competitorsData.filter(item => 
+        item.competitor.toLowerCase().includes(competitor.toLowerCase())
+    );
+    res.json(filteredData);
 });
 
 module.exports = router;
