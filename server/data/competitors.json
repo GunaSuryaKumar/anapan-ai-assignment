@@ -1,0 +1,37 @@
+[
+    {
+        "competitor": "TCS",
+        "description": "Cloud-first data strategy enhancing customer experience and agility.",
+        "source": "https://www.linkedin.com/posts/paolaolivari_virgin-media-o2-partners-with-tcs-for-cloud-first-activity-7316201299815923712-AVYB/"
+    },
+    {
+        "competitor": "Accenture",
+        "description": "Private 5G solutions for UK businesses with edge computing and AI.",
+        "source": "https://newsroom.accenture.com/news/2024/virgin-media-o2-partners-with-accenture-to-enhance-private-5g-solutions-for-uk-businesses-tapping-into-estimated-half-a-billion-pound-uk-market"
+    },
+    {
+        "competitor": "Tech Mahindra",
+        "description": "Managed network operations for fiber-optic infrastructure.",
+        "source": "https://www.linkedin.com/posts/ellen-gregory-ba-hons-04b89095_techmahindra-diwali2021-virginmediao2-activity-6861774185182568448-d2Ju/"
+    },
+    {
+        "competitor": "Capgemini",
+        "description": "AI-driven solutions for network optimization and customer experience.",
+        "source": "https://www.capgemini.com/no-no/industries/telecommunications/ai-in-telecommunications/"
+    },
+    {
+        "competitor": "Wipro",
+        "description": "IT architecture simplification for business systems.",
+        "source": "https://www.telcotitans.com/telefonicawatch/wipro-and-tech-m-back-grand-designs-for-o2-architecture/2888.article"
+    },
+    {
+        "competitor": "Deloitte",
+        "description": "Developed ESG strategy \"Better Connections Plan\" for sustainability.",
+        "source": "https://www.deloitte.com/uk/en/about/story/impact/virgin-media-o2s-esg-strategy.html"
+    },
+    {
+        "competitor": "EY",
+        "description": "AI-driven sustainability strategies for telecom sector.",
+        "source": "https://www.libertyglobal.com/liberty-global-and-ey-report-outlines-path-for-telco-sector-to-realise-major-ai-driven-sustainability-gains/"
+    }
+]
