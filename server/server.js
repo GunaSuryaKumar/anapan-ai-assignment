@@ -25,9 +25,16 @@ app.use(express.static(path.join(__dirname, '../public')));
 // API routes
 app.use('/api', competitorsRouter);
 
-// Start server
-app.listen(port, () => {
-    console.log(`Server running on http://localhost:${port}`);
+// Fallback to index.html for SPA routing
+app.get('*', (req, res) => {
+    res.sendFile(path.join(__dirname, '../public', 'index.html'));
 });
+
+// Start server (for local development)
+if (!module.parent) {
+    app.listen(port, () => {
+        console.log(`Server running on http://localhost:${port}`);
+    });
+}
 
 module.exports = app;
